@@ -3,17 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Program2</title>
+    <title>Program3</title>
 </head>
 <body>
-    <h1>Fibonacci Program</h1>
+    <h1>Holiday list</h1>
     <form method="POST">
         {% csrf_token %}
         {{form.as_p}}
         <button type="submit">submit</button>
     </form>
-    {% if param1 %}
-    <h2>Fibonacci of {{param2}} is {{param1}}</h2>
-    {% endif %}
+    
+    {% for i in param1 %}
+    <table>
+        {% for j in i%}
+        {{j}}
+        {% endfor %}
+        {{param2}}{{param3}}
+    </table>
+    {% endfor %}
 </body>
 </html>

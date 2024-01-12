@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("fibo1",include("fibo1.urls")),
     path("fact1",include("fact1.urls")),
+    path("holiday1",include("holiday1.urls"))
 ]
